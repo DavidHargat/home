@@ -29,7 +29,7 @@ if [[ -n "$TMUX" ]]; then
 fi
 
 # git autocomplete
-source ~/.git-autocomplete.bash
+source ~/.git-completion.bash
 
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
