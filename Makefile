@@ -1,21 +1,17 @@
-
-all: dotfiles brews autocomplete ~/.vim/bundle/Vundle.vim
+all: dotfiles brews autocomplete ~/.vim/bundle/Vundle.vim bin
 
 default: all
 
+bin:
+	cp bin/* /usr/local/bin/
+
 dotfiles:
-
-	echo >> ~/.profile
 	cp ~/.profile ~/.profile.old
-	cat ./.profile > ~/.profile
-
-	echo >> ~/.tmux.conf
+	cp .profile ~/.profile
 	cp ~/.tmux.conf ~/.tmux.conf.old
-	cat ./.tmux.conf > ~/.tmux.conf
-
-	echo >> ~/.vimrc
+	cp .tmux.conf ~/.tmux.conf
 	cp ~/.vimrc ~/.vimrc.old
-	cat ./.vimrc > ~/.vimrc
+	cp .vimrc ~/.vimrc
 
 autocomplete: brews
 	wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
@@ -29,4 +25,4 @@ brews:
 	brew install ack
 	brew install wget
 
-.PHONY: dotfiles brews all default autocomplete
+.PHONY: dotfiles brews all default autocomplete bin
