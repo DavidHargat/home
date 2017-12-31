@@ -44,8 +44,9 @@ command! M !make
 autocmd FileType text,markdown let b:vcm_tab_complete = 'omni'
 
 " put swap files in backups directory
-set backupdir=~/.vim/backups
-set directory=~/.vim/backups
+" set backupdir=~/.vim/backups
+" set directory=~/.vim/backups
+set nobackup
 
 
 " CUSTOM
