@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+cd $(git rev-parse --show-toplevel)
+function setup() {
+	ln -s `pwd`/.vimrc ${HOME}/.vimrc
+	ln -s `pwd`/.bash_profile ${HOME}/.bash_profile
+	ln -s `pwd`/.tmux.conf ${HOME}/.tmux.conf
+	ln -s `pwd`/.inputrc ${HOME}/.inputrc
+	ln -s `pwd`/.gitconfig ${HOME}/.gitconfig
+	mkdir -p ${HOME}/personal/{notes,github,projects,gate}
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	vim +PluginInstall +qall
+	git config --global user.name "af-inet"
+	git config --global user.email "davidmhargat@gmail.com"
+}
+# setup is entirely idempotent, so errors may be ignored
+setup 2>/dev/null

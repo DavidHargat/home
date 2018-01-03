@@ -10,8 +10,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elm.vim'
-Plugin 'git@github.com:tikhomirov/vim-glsl.git'
-Plugin 'git@github.com:ajh17/VimCompletesMe.git'
+Plugin 'https://github.com/tikhomirov/vim-glsl.git'
+Plugin 'https://github.com/ajh17/VimCompletesMe.git'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'https://github.com/smerrill/vcl-vim-plugin'
 Plugin 'https://github.com/luochen1990/rainbow'

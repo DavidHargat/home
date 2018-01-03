@@ -6,8 +6,8 @@ alias less="less -R"
 alias ack="ack --color"
 
 # notes
-alias nn="vim ~/Documents/NOTES.md"
-alias n="cat ~/Documents/NOTES.md"
+alias nn="vim ~/personal/notes/"
+alias mm="vim ~/personal/notes/MISC.md"
 
 # formatting json
 alias json="python -m json.tool"
